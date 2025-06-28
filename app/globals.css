@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pastel-blue: #a3bffa;
+  --pastel-green: #c1e1c1;
+  --light-gray: #f8f9fa;
+  --dark-gray: #6b7280;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-400 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-green-300 hover:bg-green-400 text-gray-800 font-semibold py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-outline {
+    @apply border-2 border-[#a3bffa] text-[#a3bffa] hover:bg-[#a3bffa] hover:text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+
+  .form-floating {
+    @apply fixed top-40 right-4 bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-lg border z-40 w-80;
+  }
+
+  .form-mobile-collapsed {
+    @apply fixed bottom-4 right-4 z-40;
+  }
+}
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
